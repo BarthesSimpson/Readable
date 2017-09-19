@@ -3,7 +3,8 @@ import React from 'react'
 //------- COMPONENTS
 import Header from '../Header'
 import ControlsContainer from '../Controls/ControlsContainer'
-import AllPosts from '../AllPosts'
+// import AllPosts from '../AllPosts'
+import CategoriesContainer from '../Categories/CategoriesContainer'
 
 //------- CONSTANTS
 import messages from '../../constants/messages'
@@ -16,7 +17,8 @@ const Home = () => {
         <div className="Home">
             <Header msg={messages.header.home} />
             <ControlsContainer level="posts" />
-            <AllPosts />
+            <CategoriesContainer />
+            {/* <AllPosts /> */}
         </div>
     )
 }
