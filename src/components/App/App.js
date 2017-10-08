@@ -12,28 +12,26 @@ import { Switch, Route } from 'react-router-dom'
 import './App.css'
 
 class App extends React.Component {
-    componentDidMount() {
-        this.props.getCategories()
-    }
-    render() {
-        return (
-            <div className="App">
-                <Switch>
-                    <Route exact path="/new" component={NewPostContainer} />
-                    <Route
-                        path="/:category/:post"
-                        component={SinglePostContainer}
-                    />
-                    <Route path="/:category" component={SingleCategory} />
-                    <Route path="/" component={Home} />
-                </Switch>
-            </div>
-        )
-    }
+  componentDidMount() {
+    this.props.getCategories()
+    if (this.props.location.pathname === '/') this.props.resetView()
+  }
+  render() {
+    return (
+      <div className="App">
+        <Switch>
+          <Route exact path="/new" component={NewPostContainer} />
+          <Route path="/:category/:post" component={SinglePostContainer} />
+          <Route path="/:category" component={SingleCategory} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </div>
+    )
+  }
 }
 
 App.propTypes = {
-    getCategories: PropTypes.func.isRequired
+  getCategories: PropTypes.func.isRequired
 }
 
 export default App

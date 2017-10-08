@@ -27,7 +27,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        getPosts: category => dispatch(getPostsFromServer(category))
+        getPosts: category => dispatch(getPostsFromServer())
     }
 }
 

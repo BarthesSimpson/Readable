@@ -18,7 +18,6 @@ const Home = () => {
             <Header msg={messages.header.home} />
             <ControlsContainer level="posts" />
             <CategoriesContainer />
-            {/* <AllPosts /> */}
         </div>
     )
 }

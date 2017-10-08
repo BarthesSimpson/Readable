@@ -1,5 +1,6 @@
 export default {
-    react: 'snowflake-o',
-    redux: 'recycle',
-    udacity: 'underline'
+  technology: 'stack-overflow',
+  'health & fitness': 'bicycle',
+  lifestyle: 'television',
+  'food & drink': 'cutlery'
 }
