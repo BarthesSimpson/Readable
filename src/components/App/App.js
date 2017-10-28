@@ -21,9 +21,9 @@ class App extends React.Component {
       <div className="App">
         <Switch>
           <Route exact path="/new" component={NewPostContainer} />
+          <Route exact path="/" component={Home} />
           <Route path="/:category/:post" component={SinglePostContainer} />
           <Route path="/:category" component={SingleCategory} />
-          <Route path="/" component={Home} />
         </Switch>
       </div>
     )
